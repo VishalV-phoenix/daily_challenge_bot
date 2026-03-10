@@ -3,3 +3,4 @@ apscheduler
 requests
 beautifulsoup4
 standard-imghdr
+urllib3<2
