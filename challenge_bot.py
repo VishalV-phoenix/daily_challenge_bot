@@ -5,7 +5,7 @@ from telegram.ext import Updater, CommandHandler
 from apscheduler.schedulers.background import BackgroundScheduler
 
 TOKEN = os.getenv("BOT_TOKEN")
-GROUP_ID = -100XXXXXXXXXX
+GROUP_ID = -1002146260288
 
 def get_index():
     with open("progress.txt") as f:
