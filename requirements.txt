@@ -5,3 +5,4 @@ requests
 beautifulsoup4
 standard-imghdr
 urllib3==1.26.18
+pytz
