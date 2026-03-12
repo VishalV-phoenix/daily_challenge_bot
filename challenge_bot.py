@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from telegram.ext import Updater, CommandHandler
 from apscheduler.schedulers.background import BackgroundScheduler
+import pytz
 
 TOKEN = os.getenv("BOT_TOKEN")
 GROUP_ID = -1002146260288
@@ -136,7 +137,7 @@ dp.add_handler(CommandHandler("undo",undo))
 dp.add_handler(CommandHandler("status",status))
 dp.add_handler(CommandHandler("load",load))
 
-scheduler=BackgroundScheduler()
+scheduler=BackgroundScheduler(timezone=pytz.utc)
 
 scheduler.add_job(send_question,'cron',hour=6,minute=0,args=[updater.bot])
 
